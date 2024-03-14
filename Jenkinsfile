@@ -19,7 +19,7 @@ pipeline {
         NEXUS_URL = "172.31.94.126:8081"
         NEXUSPORT = "8081"
         NEXUS_REPOSITORY = "vprofile-release"
-	    NEXUS-GRP-REPO    = "vprofile-maven-group"
+	    NEXUS_GRP_REPO = "vprofile-maven-group"
         NEXUS_LOGIN = "nexuslogin"
         ARTVERSION = "${env.BUILD_ID}"
     }
