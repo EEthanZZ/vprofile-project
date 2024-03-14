@@ -8,11 +8,11 @@ pipeline {
     }
 
     environment {
-        SNAP-REPO = "vprofile-snapshot"
-        NEXUS-USER = "admin"
-        NEXUS-PASS = "admin"
-        RELEASE-REPO = "vprofile-release"
-        CENTRAL-REPO = "vprofile-maven-central-store-dependencies"
+        SNAP_REPO = "vprofile-snapshot"
+        NEXUS_USER = "admin"
+        NEXUS_PASS = "admin"
+        RELEASE_REPO = "vprofile-release"
+        CENTRAL_REPO = "vprofile-maven-central-store-dependencies"
         NEXUSIP = "172.31.94.126"
         NEXUS_VERSION = "nexus3"
         NEXUS_PROTOCOL = "http"
