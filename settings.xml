@@ -2,20 +2,25 @@
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
-  <servers>
-        <server>
-            <id>zycc-maven-central-store</id>
-            <username>aws</username>
-            <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
-        </server>
-    </servers>
+
+<servers>
+  <server>
+    <id>zycc-maven-central-store</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
 <profiles>
   <profile>
     <id>zycc-maven-central-store</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
     <repositories>
       <repository>
         <id>zycc-maven-central-store</id>
-    <url>https://zycc-411215414110.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/</url>
+        <url>https://zycc-411215414110.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/</url>
       </repository>
     </repositories>
   </profile>
@@ -23,10 +28,11 @@
 <activeProfiles>
         <activeProfile>default</activeProfile>
     </activeProfiles>
+
 <mirrors>
   <mirror>
     <id>zycc-maven-central-store</id>
-    <name>domainname--maven-central-store</name>
+    <name>zycc-maven-central-store</name>
     <url>https://zycc-411215414110.d.codeartifact.us-east-1.amazonaws.com/maven/maven-central-store/</url>
     <mirrorOf>*</mirrorOf>
   </mirror>
